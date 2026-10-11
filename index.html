@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logthree Technologies — Software, Apps, Games, Support</title>
+    <meta name="description" content="Logthree Technologies specializes in high-performance desktop and enterprise software, cross-platform mobile apps, interactive games, and mission-critical technical support.">
+    <meta name="keywords" content="Logthree Technologies, Software Development, App Development, Game Studio, IT Support, Enterprise Solutions">
+    <meta name="author" content="Logthree Technologies">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Logthree Technologies — Software, Apps, Games, Support">
+    <meta property="og:description" content="Engineering digital excellence across software, mobile apps, interactive games, and enterprise technical support.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://logthree.com">
+
+    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#F0F5FA',
+                            100: '#E1EBF5',
+                            200: '#C3D7EB',
+                            300: '#95BCE0',
+                            400: '#5E9CD1',
+                            500: '#2A72B5',
+                            600: '#1D5A96',
+                            700: '#174779',
+                            800: '#133961',
+                            900: '#0F2C4C',
+                            950: '#0B192C',
+                        },
+                        navy: {
+                            800: '#1E3E62',
+                            900: '#0B192C',
+                            950: '#060F1C',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .glass-header {
+            background-color: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .hero-pattern {
+            background-color: #f8fafc;
+            background-image: radial-gradient(#cbd5e1 0.75px, transparent 0.75px);
+            background-size: 24px 24px;
+        }
+        .badge-pulse {
+            box-shadow: 0 0 0 0 rgba(42, 114, 181, 0.4);
+            animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse-ring {
+            0% {
+                box-shadow: 0 0 0 0 rgba(42, 114, 181, 0.5);
+            }
+            70%, 100% {
+                box-shadow: 0 0 0 10px rgba(42, 114, 181, 0);
+            }
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased text-slate-800 bg-slate-50 selection:bg-brand-500 selection:text-white">
+
+    <!-- Global Header / Navigation -->
+    <header class="fixed top-0 inset-x-0 z-50 transition-all duration-300 border-b border-slate-200/80 glass-header" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Monogram Logo -->
+                <a href="#home" class="flex items-center gap-3.5 group focus:outline-none focus:ring-2 focus:ring-brand-500 rounded-lg p-1">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-700 via-brand-800 to-navy-900 flex items-center justify-center text-white font-display font-extrabold text-xl shadow-md shadow-brand-900/20 group-hover:scale-105 transition-transform duration-200">
+                        L3
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-display font-black text-xl tracking-tight text-navy-950 flex items-center leading-none">
+                            LOGTHREE
+                        </span>
+                        <span class="text-[10px] tracking-widest font-bold uppercase text-slate-500 mt-1">
+                            Technologies
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-1 lg:space-x-3">
+                    <a href="#home" class="px-3.5 py-2 text-sm font-semibold text-slate-700 hover:text-brand-600 rounded-lg hover:bg-slate-100/70 transition-colors">Home</a>
+                    <a href="#services" class="px-3.5 py-2 text-sm font-semibold text-slate-700 hover:text-brand-600 rounded-lg hover:bg-slate-100/70 transition-colors">Services</a>
+                    <a href="#capabilities" class="px-3.5 py-2 text-sm font-semibold text-slate-700 hover:text-brand-600 rounded-lg hover:bg-slate-100/70 transition-colors">Capabilities</a>
+                    <a href="#about" class="px-3.5 py-2 text-sm font-semibold text-slate-700 hover:text-brand-600 rounded-lg hover:bg-slate-100/70 transition-colors">About Us</a>
+                    <a href="#contact" class="px-3.5 py-2 text-sm font-semibold text-slate-700 hover:text-brand-600 rounded-lg hover:bg-slate-100/70 transition-colors">Contact</a>
+                </nav>
+
+                <!-- Desktop Action CTA -->
+                <div class="hidden md:flex items-center space-x-3">
+                    <a href="#contact" class="inline-flex items-center justify-center px-4 py-2.5 text-sm font-semibold rounded-lg text-white bg-brand-700 hover:bg-brand-800 shadow-sm transition duration-150 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600">
+                        Get in Touch
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Menu Button -->
+                <div class="flex md:hidden">
+                    <button id="mobile-menu-btn" type="button" class="p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-500" aria-label="Toggle navigation menu">
+                        <svg class="h-6 w-6" id="menu-icon-open" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg class="h-6 w-6 hidden" id="menu-icon-close" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden border-b border-slate-200 bg-white px-5 pt-3 pb-6 space-y-2 shadow-xl">
+            <a href="#home" class="block px-3 py-2.5 text-base font-semibold text-slate-700 hover:bg-slate-50 rounded-lg mobile-nav-link">Home</a>
+            <a href="#services" class="block px-3 py-2.5 text-base font-semibold text-slate-700 hover:bg-slate-50 rounded-lg mobile-nav-link">Services</a>
+            <a href="#capabilities" class="block px-3 py-2.5 text-base font-semibold text-slate-700 hover:bg-slate-50 rounded-lg mobile-nav-link">Capabilities</a>
+            <a href="#about" class="block px-3 py-2.5 text-base font-semibold text-slate-700 hover:bg-slate-50 rounded-lg mobile-nav-link">About Us</a>
+            <a href="#contact" class="block px-3 py-2.5 text-base font-semibold text-slate-700 hover:bg-slate-50 rounded-lg mobile-nav-link">Contact</a>
+            <div class="pt-3">
+                <a href="#contact" class="w-full inline-flex items-center justify-center px-4 py-2.5 text-base font-semibold rounded-lg text-white bg-brand-700 hover:bg-brand-800 shadow-sm mobile-nav-link">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative pt-32 pb-20 md:pt-44 md:pb-32 hero-pattern overflow-hidden border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-4xl mx-auto">
+                    <!-- Status Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 shadow-xs mb-8">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 badge-pulse"></span>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-slate-600">Enterprise Engineering & Solutions</span>
+                    </div>
+
+                    <!-- Main Headline -->
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold text-navy-950 tracking-tight leading-[1.12] mb-6">
+                        Engineering Digital Excellence for Modern Enterprise
+                    </h1>
+
+                    <!-- Official Tagline Badge -->
+                    <div class="inline-block px-5 py-2 rounded-xl bg-brand-50 border border-brand-200/80 mb-6">
+                        <p class="text-base sm:text-xl font-bold text-brand-700 tracking-wide font-display">
+                            Software <span class="text-slate-400 font-light mx-1.5">|</span> Apps <span class="text-slate-400 font-light mx-1.5">|</span> Games <span class="text-slate-400 font-light mx-1.5">|</span> Support
+                        </p>
+                    </div>
+
+                    <!-- Description -->
+                    <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed font-normal">
+                        <strong>Logthree Technologies</strong> crafts high-performance desktop and enterprise software, intuitive cross-platform mobile apps, engaging interactive game experiences, and provides dedicated mission-critical technical support.
+                    </p>
+
+                    <!-- Call To Action Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <a href="#services" class="w-full sm:w-auto inline-flex items-center justify-center px-7 py-3.5 text-base font-semibold rounded-xl text-white bg-brand-700 hover:bg-brand-800 shadow-sm hover:shadow transition-all duration-200 group">
+                            Explore Services
+                            <svg class="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </a>
+                        <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center px-7 py-3.5 text-base font-semibold rounded-xl text-slate-700 bg-white hover:bg-slate-50 border border-slate-300 shadow-2xs hover:border-slate-400 transition-all duration-200">
+                            Contact Us
+                        </a>
+                    </div>
+
+                    <!-- Quick Indicator Bar -->
+                    <div class="mt-16 pt-10 border-t border-slate-200/70 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                        <div class="p-4 rounded-xl bg-white/80 border border-slate-200/60 shadow-xs">
+                            <div class="text-xs uppercase tracking-wider text-slate-500 font-semibold mb-1">Architecture</div>
+                            <div class="font-display font-bold text-slate-900 text-sm">Solid Codebases</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-white/80 border border-slate-200/60 shadow-xs">
+                            <div class="text-xs uppercase tracking-wider text-slate-500 font-semibold mb-1">Design</div>
+                            <div class="font-display font-bold text-slate-900 text-sm">Intuitive UX</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-white/80 border border-slate-200/60 shadow-xs">
+                            <div class="text-xs uppercase tracking-wider text-slate-500 font-semibold mb-1">Performance</div>
+                            <div class="font-display font-bold text-slate-900 text-sm">Optimized Runtime</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-white/80 border border-slate-200/60 shadow-xs">
+                            <div class="text-xs uppercase tracking-wider text-slate-500 font-semibold mb-1">Reliability</div>
+                            <div class="font-display font-bold text-slate-900 text-sm">Active Support</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Pillars / Services Section -->
+        <section id="services" class="py-20 md:py-28 bg-white border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider text-brand-700 bg-brand-50 border border-brand-200 rounded-md mb-3">
+                        Core Capabilities
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-display font-bold text-navy-950 tracking-tight">
+                        Our Four Core Pillars
+                    </h2>
+                    <p class="mt-3 text-slate-600 text-base sm:text-lg">
+                        Tailored technology engineering built around stability, responsive execution, and reliable lifecycle partnership.
+                    </p>
+                </div>
+
+                <!-- 4 Service Pillars Matching the Tagline -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Pillar 1: Software -->
+                    <div class="bg-slate-50/80 rounded-2xl p-7 border border-slate-200/90 shadow-sm hover:shadow-md hover:border-brand-300 transition-all group flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-white border border-slate-200 text-brand-700 flex items-center justify-center mb-6 group-hover:bg-brand-700 group-hover:text-white transition-colors shadow-2xs">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-brand-700">01 / Software</span>
+                            <h3 class="font-display font-bold text-xl text-slate-900 mt-1 mb-3">Software Development</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                High-performance desktop and enterprise tools designed for optimal computation, low-latency execution, secure local storage, and automated business workflows.
+                            </p>
+                        </div>
+                        <ul class="mt-6 pt-5 border-t border-slate-200/70 text-xs font-semibold text-slate-600 space-y-2">
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span> Native Desktop Applications
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span> Enterprise Automation Systems
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span> High-Speed Offline Architectures
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Pillar 2: Apps -->
+                    <div class="bg-slate-50/80 rounded-2xl p-7 border border-slate-200/90 shadow-sm hover:shadow-md hover:border-brand-300 transition-all group flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-white border border-slate-200 text-brand-700 flex items-center justify-center mb-6 group-hover:bg-brand-700 group-hover:text-white transition-colors shadow-2xs">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-brand-700">02 / Apps</span>
+                            <h3 class="font-display font-bold text-xl text-slate-900 mt-1 mb-3">Mobile Applications</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Cross-platform iOS and Android applications engineered for speed, clean UX patterns, synchronized cloud data, and dependable offline resilience.
+                            </p>
+                        </div>
+                        <ul class="mt-6 pt-5 border-t border-slate-200/70 text-xs font-semibold text-slate-600 space-y-2">
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span> iOS & Android Solutions
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span> Flutter & Modern UI Frameworks
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span> API Integrations & Cloud Sync
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Pillar 3: Games -->
+                    <div class="bg-slate-50/80 rounded-2xl p-7 border border-slate-200/90 shadow-sm hover:shadow-md hover:border-brand-300 transition-all group flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-white border border-slate-200 text-brand-700 flex items-center justify-center mb-6 group-hover:bg-brand-700 group-hover:text-white transition-colors shadow-2xs">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-brand-700">03 / Games</span>
+                            <h3 class="font-display font-bold text-xl text-slate-900 mt-1 mb-3">Games & Interactive</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Engaging interactive media, casual titles, and gameplay experiences developed with optimized mechanics, smooth frame rates, and sound design.
+                            </p>
+                        </div>
+                        <ul class="mt-6 pt-5 border-t border-slate-200/70 text-xs font-semibold text-slate-600 space-y-2">
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span> 2D & 3D Interactive Media
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span> Game Logic Prototyping
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span> Multiplatform Game Publishing
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Pillar 4: Support -->
+                    <div class="bg-slate-50/80 rounded-2xl p-7 border border-slate-200/90 shadow-sm hover:shadow-md hover:border-brand-300 transition-all group flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-white border border-slate-200 text-brand-700 flex items-center justify-center mb-6 group-hover:bg-brand-700 group-hover:text-white transition-colors shadow-2xs">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                                </svg>
+                            </div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-brand-700">04 / Support</span>
+                            <h3 class="font-display font-bold text-xl text-slate-900 mt-1 mb-3">Support & Maintenance</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Mission-critical IT support, ongoing product maintenance, regular security updates, server monitoring, and prompt engineering assistance.
+                            </p>
+                        </div>
+                        <ul class="mt-6 pt-5 border-t border-slate-200/70 text-xs font-semibold text-slate-600 space-y-2">
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span> Proactive System Monitoring
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span> Security Patches & Releases
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span> Dedicated SLA Helpdesk
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Capabilities & Approach Section -->
+        <section id="capabilities" class="py-20 md:py-28 bg-slate-100/60 border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <!-- Left: Capabilities Overview -->
+                    <div class="lg:col-span-6 space-y-6">
+                        <span class="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider text-brand-700 bg-brand-100 rounded-md">
+                            Why Logthree
+                        </span>
+                        <h2 class="text-3xl sm:text-4xl font-display font-bold text-navy-950 tracking-tight">
+                            Engineered for Dependability and Peak Performance
+                        </h2>
+                        <p class="text-slate-600 leading-relaxed">
+                            We take an engineering-first stance to digital creation. Rather than building over-engineered solutions, we focus on reliable architectures that scale smoothly and provide continuous uptime.
+                        </p>
+
+                        <!-- Feature Checklist -->
+                        <div class="space-y-4 pt-2">
+                            <div class="flex items-start gap-3.5">
+                                <div class="w-6 h-6 rounded-lg bg-brand-700 text-white flex items-center justify-center shrink-0 text-xs font-bold mt-0.5">
+                                    ✓
+                                </div>
+                                <div>
+                                    <h4 class="font-display font-bold text-slate-900 text-sm">High Performance & Zero Unnecessary Bloat</h4>
+                                    <p class="text-xs text-slate-600 mt-0.5 leading-relaxed">Optimized resource usage ensuring quick launch times and smooth operations across low-spec and high-spec machines alike.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3.5">
+                                <div class="w-6 h-6 rounded-lg bg-brand-700 text-white flex items-center justify-center shrink-0 text-xs font-bold mt-0.5">
+                                    ✓
+                                </div>
+                                <div>
+                                    <h4 class="font-display font-bold text-slate-900 text-sm">Modern & Robust Tech Stack</h4>
+                                    <p class="text-xs text-slate-600 mt-0.5 leading-relaxed">Built with proven development stacks (Flutter, Dart, C++, Modern Web, and scalable cloud services) suited to the problem.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3.5">
+                                <div class="w-6 h-6 rounded-lg bg-brand-700 text-white flex items-center justify-center shrink-0 text-xs font-bold mt-0.5">
+                                    ✓
+                                </div>
+                                <div>
+                                    <h4 class="font-display font-bold text-slate-900 text-sm">Client-Centric Engineering</h4>
+                                    <p class="text-xs text-slate-600 mt-0.5 leading-relaxed">Direct interaction with engineers who build and maintain the systems, giving clear timelines and proactive support.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Technical Highlights Card -->
+                    <div class="lg:col-span-6">
+                        <div class="bg-navy-950 rounded-2xl p-8 sm:p-10 text-white shadow-xl relative overflow-hidden border border-navy-800">
+                            <!-- Subtle Ambient Glow -->
+                            <div class="absolute -right-16 -top-16 w-60 h-60 bg-brand-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+                            <div class="flex items-center justify-between pb-6 border-b border-navy-800 mb-6">
+                                <div>
+                                    <h3 class="font-display font-bold text-xl text-white">Logthree Engineering Matrix</h3>
+                                    <p class="text-xs text-slate-400 mt-1">Our standard execution pipeline</p>
+                                </div>
+                                <span class="px-2.5 py-1 text-xs font-mono font-bold uppercase rounded bg-brand-900/90 text-brand-300 border border-brand-700/60">
+                                    Active 2026
+                                </span>
+                            </div>
+
+                            <!-- Process Rows -->
+                            <div class="space-y-4">
+                                <div class="bg-navy-900/80 p-4 rounded-xl border border-navy-800 flex items-center justify-between">
+                                    <div>
+                                        <p class="text-xs font-bold text-white uppercase tracking-wider">Phase 1 · Analysis & Architecture</p>
+                                        <p class="text-xs text-slate-400 mt-0.5">Scoping data requirements, UX paths, and database schema</p>
+                                    </div>
+                                    <span class="text-xs font-mono text-emerald-400 font-semibold">100% Focused</span>
+                                </div>
+
+                                <div class="bg-navy-900/80 p-4 rounded-xl border border-navy-800 flex items-center justify-between">
+                                    <div>
+                                        <p class="text-xs font-bold text-white uppercase tracking-wider">Phase 2 · Rapid Development</p>
+                                        <p class="text-xs text-slate-400 mt-0.5">Native multi-target builds with clean source separation</p>
+                                    </div>
+                                    <span class="text-xs font-mono text-emerald-400 font-semibold">Continuous CI/CD</span>
+                                </div>
+
+                                <div class="bg-navy-900/80 p-4 rounded-xl border border-navy-800 flex items-center justify-between">
+                                    <div>
+                                        <p class="text-xs font-bold text-white uppercase tracking-wider">Phase 3 · Stress & Security Testing</p>
+                                        <p class="text-xs text-slate-400 mt-0.5">High-load data simulations and input validation checks</p>
+                                    </div>
+                                    <span class="text-xs font-mono text-emerald-400 font-semibold">Zero-Defect Goal</span>
+                                </div>
+
+                                <div class="bg-navy-900/80 p-4 rounded-xl border border-navy-800 flex items-center justify-between">
+                                    <div>
+                                        <p class="text-xs font-bold text-white uppercase tracking-wider">Phase 4 · Long-Term Maintenance</p>
+                                        <p class="text-xs text-slate-400 mt-0.5">On-demand support contracts and regular performance audits</p>
+                                    </div>
+                                    <span class="text-xs font-mono text-emerald-400 font-semibold">SLA Backed</span>
+                                </div>
+                            </div>
+
+                            <!-- Official Domain Badge -->
+                            <div class="mt-8 pt-6 border-t border-navy-800 flex items-center justify-between text-xs text-slate-400">
+                                <span>Official Domain: <span class="text-brand-300 font-mono font-medium">logthree.com</span></span>
+                                <span class="text-emerald-400 font-semibold flex items-center gap-1.5">
+                                    <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Verified Entity
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20 md:py-28 bg-white border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <span class="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider text-brand-700 bg-brand-50 border border-brand-200 rounded-md mb-3">
+                        About Us
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-display font-bold text-navy-950 tracking-tight">
+                        About Logthree Technologies
+                    </h2>
+                    <p class="mt-3 text-slate-600 text-base sm:text-lg">
+                        A focused engineering house dedicated to software, applications, games, and reliable support.
+                    </p>
+                </div>
+
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Value 1 -->
+                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 text-center">
+                        <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center mx-auto mb-4 font-display font-extrabold text-lg">
+                            01
+                        </div>
+                        <h3 class="font-display font-bold text-slate-900 text-lg mb-2">Our Mission</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            To create dependable, intuitive, and performant digital solutions that help companies and users accomplish their work effortlessly.
+                        </p>
+                    </div>
+
+                    <!-- Value 2 -->
+                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 text-center">
+                        <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center mx-auto mb-4 font-display font-extrabold text-lg">
+                            02
+                        </div>
+                        <h3 class="font-display font-bold text-slate-900 text-lg mb-2">Our Standards</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            We value clean code, strong security, zero unnecessary dependencies, and respectful data privacy practices across every project.
+                        </p>
+                    </div>
+
+                    <!-- Value 3 -->
+                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 text-center">
+                        <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center mx-auto mb-4 font-display font-extrabold text-lg">
+                            03
+                        </div>
+                        <h3 class="font-display font-bold text-slate-900 text-lg mb-2">Our Commitment</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Technology doesn't end at deployment. We stand right beside our clients with active technical assistance and consistent long-term updates.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Inquiry Section -->
+        <section id="contact" class="py-20 md:py-28 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <span class="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider text-brand-700 bg-brand-100 rounded-md mb-3">
+                        Connect With Us
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-display font-bold text-navy-950 tracking-tight">
+                        Start a Conversation
+                    </h2>
+                    <p class="mt-3 text-slate-600">
+                        Have a project inquiry, software development need, or support request? Get in touch with our team.
+                    </p>
+                </div>
+
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                    <!-- Left Contact Details Card -->
+                    <div class="md:col-span-5 bg-navy-950 text-white rounded-2xl p-8 space-y-6 shadow-md border border-navy-800">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-brand-700 flex items-center justify-center text-white font-display font-black text-xl mb-4">
+                                L3
+                            </div>
+                            <h3 class="font-display font-bold text-xl text-white">Logthree Technologies</h3>
+                            <p class="text-xs uppercase tracking-wider text-brand-400 font-semibold mt-1">
+                                Software, Apps, Games, Support
+                            </p>
+                        </div>
+                        
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            Reach out directly for custom developments, software partnerships, or dedicated IT infrastructure contracts.
+                        </p>
+
+                        <div class="space-y-4 pt-3 text-sm">
+                            <div class="flex items-center gap-3 text-slate-300">
+                                <div class="w-8 h-8 rounded-lg bg-navy-900 border border-navy-800 flex items-center justify-center text-brand-400">
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                                <span class="font-medium">contact@logthree.com</span>
+                            </div>
+
+                            <div class="flex items-center gap-3 text-slate-300">
+                                <div class="w-8 h-8 rounded-lg bg-navy-900 border border-navy-800 flex items-center justify-center text-brand-400">
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                                    </svg>
+                                </div>
+                                <span class="font-mono text-xs">www.logthree.com</span>
+                            </div>
+
+                            <div class="flex items-center gap-3 text-slate-300">
+                                <div class="w-8 h-8 rounded-lg bg-navy-900 border border-navy-800 flex items-center justify-center text-brand-400">
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                                <span>Mon – Fri: 9:00 AM – 6:00 PM IST</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-navy-800 text-xs text-slate-400 leading-relaxed">
+                            We pride ourselves on prompt replies. Inquiries are generally addressed within 1 business day.
+                        </div>
+                    </div>
+
+                    <!-- Right Contact Form -->
+                    <div class="md:col-span-7 bg-white rounded-2xl p-8 border border-slate-200 shadow-sm relative">
+                        <form id="contact-form" class="space-y-5" onsubmit="handleContactSubmit(event)">
+                            <div>
+                                <label for="name" class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-1.5">Full Name</label>
+                                <input type="text" id="name" name="name" required placeholder="e.g. John Doe" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all placeholder:text-slate-400">
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-1.5">Business Email</label>
+                                <input type="email" id="email" name="email" required placeholder="name@company.com" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all placeholder:text-slate-400">
+                            </div>
+
+                            <div>
+                                <label for="service-interest" class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-1.5">Primary Interest</label>
+                                <select id="service-interest" name="service-interest" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all bg-white text-slate-700">
+                                    <option value="Software Development">Software Development</option>
+                                    <option value="Mobile Applications">Mobile Applications</option>
+                                    <option value="Games & Interactive Media">Games & Interactive Media</option>
+                                    <option value="Technical Support & Maintenance">Technical Support & Maintenance</option>
+                                    <option value="General Consultation">General Consultation</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-1.5">Project Scope / Details</label>
+                                <textarea id="message" name="message" rows="4" required placeholder="Tell us about your requirements, timeline, and goals..." class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all placeholder:text-slate-400 resize-none"></textarea>
+                            </div>
+
+                            <button type="submit" id="submit-btn" class="w-full inline-flex items-center justify-center px-6 py-3.5 text-sm font-semibold rounded-xl text-white bg-brand-700 hover:bg-brand-800 shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600">
+                                Send Message
+                            </button>
+                        </form>
+
+                        <!-- In-page Submission Notification Toast -->
+                        <div id="form-toast" class="hidden mt-4 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm">
+                            <div class="flex items-center gap-3">
+                                <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <div>
+                                    <p class="font-bold">Thank you for reaching out!</p>
+                                    <p class="text-xs text-emerald-700 mt-0.5">Your inquiry has been received. Our team will get back to you shortly.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy-950 text-slate-400 py-14 border-t border-navy-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <!-- Col 1: Brand Info -->
+                <div class="md:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-brand-700 flex items-center justify-center text-white font-display font-extrabold text-sm">
+                            L3
+                        </div>
+                        <span class="font-display font-black text-lg text-white tracking-tight">LOGTHREE TECHNOLOGIES</span>
+                    </div>
+                    <p class="text-xs font-semibold uppercase tracking-wider text-brand-400">Software · Apps · Games · Support</p>
+                    <p class="text-xs text-slate-400 max-w-sm leading-relaxed">
+                        Engineering reliable digital solutions, scalable multi-platform applications, interactive games, and continuous technical support for modern organizations.
+                    </p>
+                </div>
+
+                <!-- Col 2: Navigation Links -->
+                <div>
+                    <h4 class="text-xs uppercase font-bold text-slate-300 tracking-wider mb-3">Navigation</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#capabilities" class="hover:text-white transition-colors">Capabilities</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Services Summary -->
+                <div>
+                    <h4 class="text-xs uppercase font-bold text-slate-300 tracking-wider mb-3">Expertise</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#services" class="hover:text-white transition-colors">Software Development</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Mobile Applications</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Games & Interactive</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Technical Support</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright & Domain -->
+            <div class="pt-8 border-t border-navy-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+                <div>
+                    &copy; 2026 Logthree Technologies. All rights reserved.
+                </div>
+                <div class="flex items-center gap-4 text-slate-500 font-mono text-[11px]">
+                    <span>logthree.com</span>
+                    <span>•</span>
+                    <a href="#home" class="hover:text-slate-300 transition-colors">Back to top ↑</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Mobile Navigation Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIconOpen = document.getElementById('menu-icon-open');
+        const menuIconClose = document.getElementById('menu-icon-close');
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function toggleMobileMenu() {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                menuIconOpen.classList.add('hidden');
+                menuIconClose.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuIconOpen.classList.remove('hidden');
+                menuIconClose.classList.add('hidden');
+            }
+        }
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+        }
+
+        // Close mobile menu on clicking any navigation anchor
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    toggleMobileMenu();
+                }
+            });
+        });
+
+        // Contact Form Interactive Submission Handler
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            const submitBtn = document.getElementById('submit-btn');
+            const formToast = document.getElementById('form-toast');
+            const form = document.getElementById('contact-form');
+
+            // Visual feedback: button state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+                formToast.classList.remove('hidden');
+                form.reset();
+
+                // Auto hide confirmation after 8 seconds
+                setTimeout(() => {
+                    formToast.classList.add('hidden');
+                }, 8000);
+            }, 600);
+        }
+    </script>
+</body>
+</html>
