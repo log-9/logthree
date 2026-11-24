@@ -363,19 +363,32 @@
                         <span class="text-white">LOG</span><span class="text-[#F26522]">BILLS</span> — Faster Billing Everyday
                     </h2>
                     <p class="mt-3 text-slate-300 text-base sm:text-lg">
-                        High-speed desktop billing, ledger management, and multi-business accounting software engineered for traders, wholesalers, and retail stores.
+                        High-speed billing, ledger management, and multi-business accounting software built to streamline daily operations for any business.
                     </p>
                 </div>
 
                 <!-- Product Spotlight Card -->
                 <div class="bg-navy-900/90 border border-navy-800 rounded-3xl p-7 sm:p-10 lg:p-12 shadow-2xl space-y-10">
                     
-                    <!-- Top Row: Brand Identity + Live Application Screenshot -->
-                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+                    <!-- Top Row: Brand Identity + Key Value Proposition -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                         <!-- Left: Logo, Tagline & Pitch -->
-                        <div class="lg:col-span-5 space-y-5">
+                        <div class="lg:col-span-7 space-y-5">
                             <div class="flex items-center gap-4">
-                                <img src="logbills_monogram.jpg" alt="LOGBILLS Monogram Icon" class="w-16 h-16 rounded-2xl object-contain bg-black p-1.5 border border-navy-700 shadow-md shrink-0">
+                                <!-- Crisp Inline SVG Monogram Badge -->
+                                <div class="w-16 h-16 rounded-2xl bg-[#060F1C] border border-navy-700 flex items-center justify-center shadow-md shrink-0">
+                                    <svg class="w-11 h-11" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <!-- Speed lines -->
+                                        <rect x="6" y="18" width="12" height="3.5" rx="1.75" fill="#F26522"/>
+                                        <rect x="10" y="26" width="9" height="3" rx="1.5" fill="#3B66B0"/>
+                                        <rect x="4" y="34" width="14" height="3.5" rx="1.75" fill="#F26522"/>
+                                        <rect x="9" y="42" width="10" height="3" rx="1.5" fill="#F26522"/>
+                                        <!-- Navy B -->
+                                        <path d="M22 12H38C44.5 12 48.5 15.5 48.5 21C48.5 25 46 27.8 42.5 29C47 30.2 50 33.5 50 38.5C50 45 45 49 37.5 49H20L22 12Z" fill="#172D56"/>
+                                        <!-- Orange L -->
+                                        <path d="M27.5 19H35L33.5 36.5H42.5L42 42.5H26L27.5 19Z" fill="#F26522"/>
+                                    </svg>
+                                </div>
                                 <div>
                                     <div class="font-display font-black text-2xl sm:text-3xl tracking-tight leading-none">
                                         <span class="text-white">LOG</span><span class="text-[#F26522]">BILLS</span>
@@ -387,7 +400,7 @@
                             </div>
 
                             <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-                                Built with a keyboard-first workflow (Tab &amp; Enter rapid item entry), <strong>LOGBILLS</strong> handles daily trade billing without lag. Switch seamlessly between <strong>List 1 / 2 / 3</strong> rate tiers, toggle <strong>Single or Multi</strong> billing modes, add custom charges like <em>Hamali</em>, <em>Bardaan</em>, and <em>Transportation</em>, and manage ledgers and sales charts across multiple businesses.
+                                Designed with a distraction-free, keyboard-first workflow, <strong>LOGBILLS</strong> lets your team generate invoices in seconds without lag. Adaptable to retail shops, distributors, service providers, and growing enterprises alike—configure your own custom billing charges, manage multiple price tiers, and track customer ledgers and sales performance from one unified workspace.
                             </p>
 
                             <!-- Action Buttons -->
@@ -399,23 +412,39 @@
                                     </svg>
                                 </button>
                                 <button type="button" onclick="toggleLogbillsSpecs()" id="specs-toggle-btn" class="inline-flex items-center justify-center px-5 py-3.5 text-sm font-semibold rounded-xl text-slate-200 bg-navy-950 hover:bg-navy-800 border border-navy-700 transition-all cursor-pointer">
-                                    Technical Specs
+                                    View Technical Specs
                                 </button>
                             </div>
                         </div>
 
-                        <!-- Right: Real Desktop App Screenshot Preview -->
-                        <div class="lg:col-span-7">
-                            <div class="group relative rounded-2xl overflow-hidden border border-navy-700 bg-navy-950 shadow-2xl cursor-pointer" onclick="openScreenshotModal()">
-                                <img src="logbills_screen.png" alt="LOGBILLS Desktop Billing Interface" class="w-full h-auto object-cover group-hover:scale-[1.015] transition-transform duration-300">
-                                <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-between p-4">
-                                    <span class="text-xs font-semibold text-white">LOGBILLS Windows Desktop Interface</span>
-                                    <span class="px-3 py-1 rounded-lg bg-[#F26522] text-white text-xs font-bold shadow">Click to Enlarge</span>
+                        <!-- Right: Clean Feature Summary Panel -->
+                        <div class="lg:col-span-5">
+                            <div class="bg-navy-950/90 rounded-2xl p-6 border border-navy-800 space-y-4">
+                                <div class="flex items-center justify-between border-b border-navy-800 pb-3.5">
+                                    <span class="text-xs font-bold uppercase tracking-wider text-white">Built for Every Business</span>
+                                    <span class="px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+                                        Offline-Ready
+                                    </span>
                                 </div>
-                            </div>
-                            <div class="mt-2.5 flex items-center justify-between text-[11px] text-slate-400 px-1">
-                                <span>Actual UI · Keyboard-Driven Billing &amp; Ledger Suite</span>
-                                <button type="button" onclick="openScreenshotModal()" class="text-[#F26522] hover:underline font-semibold cursor-pointer">View Full Screen ↗</button>
+
+                                <ul class="space-y-3 text-xs text-slate-300">
+                                    <li class="flex items-start gap-2.5">
+                                        <span class="w-5 h-5 rounded-md bg-[#F26522]/15 text-[#F26522] flex items-center justify-center shrink-0 font-bold">✓</span>
+                                        <span><strong class="text-white">Rapid Invoice Creation:</strong> Keyboard-driven item entry with instant customer lookup and one-click Save, Receive, or Print.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2.5">
+                                        <span class="w-5 h-5 rounded-md bg-[#F26522]/15 text-[#F26522] flex items-center justify-center shrink-0 font-bold">✓</span>
+                                        <span><strong class="text-white">Fully Editable Billing Charges:</strong> Define and customize your own additional invoice charges, discounts, and tax rules to match your workflow.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2.5">
+                                        <span class="w-5 h-5 rounded-md bg-[#F26522]/15 text-[#F26522] flex items-center justify-center shrink-0 font-bold">✓</span>
+                                        <span><strong class="text-white">Complete Financial Visibility:</strong> Real-time customer ledgers, payment tracking, sales charts, and multi-business management.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2.5">
+                                        <span class="w-5 h-5 rounded-md bg-[#F26522]/15 text-[#F26522] flex items-center justify-center shrink-0 font-bold">✓</span>
+                                        <span><strong class="text-white">Zero-Downtime Architecture:</strong> Works smoothly offline with automatic cloud synchronization whenever you are connected.</span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -429,16 +458,16 @@
                                 Customers, Bills, Products, Sales Chart, Payments, Ledger &amp; Reports
                             </div>
                             <div>
-                                <span class="text-[#F26522] font-bold block mb-0.5">Smart Pricing &amp; Units</span>
-                                3-Tier Rate Lists (List 1/2/3), KG / Unit Conversions, Single &amp; Multi Mode
+                                <span class="text-[#F26522] font-bold block mb-0.5">Flexible Pricing &amp; Units</span>
+                                Multiple Rate Tiers, Custom Measurement Units, Single &amp; Bulk Entry Modes
                             </div>
                             <div>
-                                <span class="text-[#F26522] font-bold block mb-0.5">Trade &amp; Mandi Charges</span>
-                                Built-in Additional Charges (Hamali, Bardaan, Transportation &amp; custom fees)
+                                <span class="text-[#F26522] font-bold block mb-0.5">Customizable Charges</span>
+                                User-Editable Additional Invoice Charges, Taxes &amp; Automatic Net Totals
                             </div>
                             <div>
                                 <span class="text-[#F26522] font-bold block mb-0.5">Architecture &amp; Themes</span>
-                                Offline-First Local DB + Cloud Sync, Light/Dark Modes &amp; Custom Themes
+                                Offline-First Local DB + Cloud Sync, Light/Dark Modes &amp; Custom Color Themes
                             </div>
                         </div>
                     </div>
@@ -447,19 +476,19 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-6 border-t border-navy-800">
                         <div class="p-4 rounded-xl bg-navy-950/80 border border-navy-800">
                             <div class="text-xs font-bold uppercase tracking-wider text-[#F26522] mb-1">Keyboard-First Speed</div>
-                            <p class="text-xs text-slate-300 leading-relaxed">Rapid Tab/Enter row navigation, instant customer search, and one-click Save, Receive, or Print.</p>
+                            <p class="text-xs text-slate-300 leading-relaxed">Rapid Tab/Enter row navigation, instant product search, and streamlined checkout built for high-volume billing.</p>
                         </div>
                         <div class="p-4 rounded-xl bg-navy-950/80 border border-navy-800">
-                            <div class="text-xs font-bold uppercase tracking-wider text-[#F26522] mb-1">3-Tier Rate Lists</div>
-                            <p class="text-xs text-slate-300 leading-relaxed">Switch instantly between List 1, List 2, and List 3 pricing alongside Single or Multi-bill modes.</p>
+                            <div class="text-xs font-bold uppercase tracking-wider text-[#F26522] mb-1">Flexible Pricing &amp; Modes</div>
+                            <p class="text-xs text-slate-300 leading-relaxed">Switch effortlessly between multiple customer rate tiers, measurement units, and single or multi-item billing modes.</p>
                         </div>
                         <div class="p-4 rounded-xl bg-navy-950/80 border border-navy-800">
                             <div class="text-xs font-bold uppercase tracking-wider text-[#F26522] mb-1">Multi-Business &amp; Ledger</div>
-                            <p class="text-xs text-slate-300 leading-relaxed">Manage separate business entities, customer ledgers, payments, and visual sales charts in one place.</p>
+                            <p class="text-xs text-slate-300 leading-relaxed">Manage separate business profiles, customer ledgers, payment records, and visual sales analytics from one app.</p>
                         </div>
                         <div class="p-4 rounded-xl bg-navy-950/80 border border-navy-800">
-                            <div class="text-xs font-bold uppercase tracking-wider text-[#F26522] mb-1">Trade-Ready Charges</div>
-                            <p class="text-xs text-slate-300 leading-relaxed">Dedicated support for Hamali, Bardaan, Transportation charges, and offline-resilient local storage.</p>
+                            <div class="text-xs font-bold uppercase tracking-wider text-[#F26522] mb-1">Customizable Billing</div>
+                            <p class="text-xs text-slate-300 leading-relaxed">Configure custom editable invoice charges, receipt formats, and offline-resilient storage tailored to your business.</p>
                         </div>
                     </div>
                 </div>
@@ -761,16 +790,6 @@
         </section>
     </main>
 
-    <!-- Full-Screen Screenshot Lightbox Modal -->
-    <div id="screenshot-modal" class="hidden fixed inset-0 z-50 bg-navy-950/90 backdrop-blur-sm flex items-center justify-center p-4 sm:p-8" onclick="closeScreenshotModal()">
-        <div class="relative max-w-6xl w-full" onclick="event.stopPropagation()">
-            <button type="button" onclick="closeScreenshotModal()" class="absolute -top-11 right-0 text-white hover:text-[#F26522] text-sm font-bold flex items-center gap-1.5 cursor-pointer">
-                Close ✕
-            </button>
-            <img src="logbills_screen.png" alt="LOGBILLS Full Desktop Interface" class="w-full h-auto rounded-2xl border border-navy-700 shadow-2xl">
-        </div>
-    </div>
-
     <!-- Footer -->
     <footer class="bg-navy-950 text-slate-400 py-14 border-t border-navy-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -874,23 +893,8 @@
             const btn = document.getElementById('specs-toggle-btn');
             const isHidden = specs.classList.contains('hidden');
             specs.classList.toggle('hidden');
-            btn.textContent = isHidden ? 'Hide Specs' : 'Technical Specs';
+            btn.textContent = isHidden ? 'Hide Technical Specs' : 'View Technical Specs';
         }
-
-        // Lightbox Modal for LOGBILLS Desktop Screenshot
-        function openScreenshotModal() {
-            document.getElementById('screenshot-modal').classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeScreenshotModal() {
-            document.getElementById('screenshot-modal').classList.add('hidden');
-            document.body.style.overflow = '';
-        }
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeScreenshotModal();
-        });
 
         // Pre-fill Contact Form for a Product & Smooth Scroll
         function inquireProduct(productName) {
